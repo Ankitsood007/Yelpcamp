@@ -1,0 +1,19 @@
+<% include ../partials/header %>
+
+<div class="container">
+<header class="jumbotron">
+    <h1>Edit <%=campground.name %> </h1>
+</header>
+
+<form action="/campgrounds/<%= campground._id %>?_method=PUT" method="POST">
+
+    <input type="text" name="campground[name]" value="<%=campground.name%>">
+    <input type="text" name="campground[image]" value="<%=campground.image%>">
+    <input type="text" name="campground[description]" value="<%=campground.description%>">
+       <button>submit!</button>
+</form>
+<hr>
+<a href="/campgrounds">go back!</a>
+
+</div>
+
